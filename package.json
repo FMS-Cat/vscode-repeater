@@ -1,0 +1,47 @@
+{
+  "name": "repeater",
+  "displayName": "Repeater",
+  "description": "Repeat character(s)",
+  "version": "0.0.2",
+  "publisher": "fms-cat",
+  "engines": {
+    "vscode": "^1.23.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.repeat"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Repeater configuration",
+      "properties": {
+        "repeater.desiredLength": {
+          "type": "number",
+          "default": 80,
+          "description": "Repeater will fill the line until the line length hits this count."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.repeat",
+        "title": "Repeater: Repeat"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6",
+    "eslint": "^4.11.0",
+    "@types/node": "^7.0.43",
+    "@types/mocha": "^2.2.42"
+  }
+}
