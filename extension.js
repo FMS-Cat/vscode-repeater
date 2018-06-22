@@ -57,7 +57,7 @@ exports.activate = ( context ) => {
   } );
 
   context.subscriptions.push( repeat );
-}
+};
 
 exports.deactivate = () => {
 };
