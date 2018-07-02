@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.0.5
+
+- sh*t I forgot to update package-lock.json
+
 ## v0.0.4
 
 - better readme
