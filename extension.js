@@ -5,7 +5,7 @@ const position = ( l, c ) => new vscode.Position( l, c );
 const range = ( l1, c1, l2, c2 ) => new vscode.Range( position( l1, c1 ), position( l2, c2 ) );
 
 exports.activate = ( context ) => {
-  let repeat = vscode.commands.registerCommand( 'extension.repeat', () => {
+  let repeat = vscode.commands.registerCommand( 'repeater.repeat', () => {
     // == grab the current editor ==============================================
     let editor = vscode.window.activeTextEditor;
     if ( !editor ) {
